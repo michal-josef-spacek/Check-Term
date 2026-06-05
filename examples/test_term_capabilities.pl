@@ -3,12 +3,12 @@
 use strict;
 use warnings;
 
-use Check::Term qw(check_term_capability);
+use Check::Term qw(check_term_capabilities);
 use Test::More 'tests' => 1;
 
 SKIP: {
         skip $Check::Term::ERROR_MESSAGE, 1
-                unless check_term_capability('parm_ich');
+                unless check_term_capabilities('parm_ich');
 
         ok(1, "Terminal 'parm_ich' capability test");
 };

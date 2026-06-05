@@ -2,9 +2,9 @@ NAME
     Check::Term - Check terminal functionality.
 
 SYNOPSIS
-     use Check::Term qw(check_term_capability $ERROR_MESSAGE);
+     use Check::Term qw(check_term_capabilities $ERROR_MESSAGE);
 
-     my $ret = check_term_capability(@capabilities);
+     my $ret = check_term_capabilities(@capabilities);
      print $ERROR_MESSAGE."\n";
 
 DESCRIPTION
@@ -16,8 +16,8 @@ DESCRIPTION
     describe issue.
 
 SUBROUTINES
-  check_term_capability
-     my $ret = check_term_capability(@capabilities);
+  check_term_capabilities
+     my $ret = check_term_capabilities(@capabilities);
 
     Check possibility of string terminal capabilities on system.
 
@@ -34,9 +34,9 @@ EXAMPLES
      use strict;
      use warnings;
 
-     use Check::Term qw(check_term_capability $ERROR_MESSAGE);
+     use Check::Term qw(check_term_capabilities $ERROR_MESSAGE);
 
-     if (check_term_capability('parm_ich')) {
+     if (check_term_capabilities('parm_ich')) {
              print "We could use terminal 'parm_ich' capability.\n";
      } else {
              print "We couldn't use terminal 'parm_ich' capability.\n";
@@ -54,12 +54,12 @@ EXAMPLES
      use strict;
      use warnings;
 
-     use Check::Term qw(check_term_capability);
+     use Check::Term qw(check_term_capabilities);
      use Test::More 'tests' => 1;
 
      SKIP: {
              skip $Check::Term::ERROR_MESSAGE, 1
-                     unless check_term_capability('parm_ich');
+                     unless check_term_capabilities('parm_ich');
 
              ok(1, "Terminal 'parm_ich' capability test");
      };

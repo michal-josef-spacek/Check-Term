@@ -1,4 +1,6 @@
 Changes
+examples/check_term_capabilities.pl
+examples/test_term_capabilities.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
@@ -17,7 +19,7 @@ META.yml
 README
 t/Check-Term/01-use.t
 t/Check-Term/02-version.t
-t/Check-Term/03-check_term_capability.t
+t/Check-Term/03-check_term_capabilities.t
 Term.pm
 xt/Check-Term/01-pod_coverage.t
 xt/Check-Term/02-pod.t

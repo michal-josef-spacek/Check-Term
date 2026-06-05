@@ -8,11 +8,11 @@ use Readonly;
 use Term::Terminfo;
 
 our $ERROR_MESSAGE;
-Readonly::Array our @EXPORT_OK => qw(check_term_capability $ERROR_MESSAGE);
+Readonly::Array our @EXPORT_OK => qw(check_term_capabilities $ERROR_MESSAGE);
 
 our $VERSION = 0.01;
 
-sub check_term_capability {
+sub check_term_capabilities {
 	my @capabilities = @_;
 
 	my $ti = Term::Terminfo->new;
@@ -40,9 +40,9 @@ Check::Term - Check terminal functionality.
 
 =head1 SYNOPSIS
 
- use Check::Term qw(check_term_capability $ERROR_MESSAGE);
+ use Check::Term qw(check_term_capabilities $ERROR_MESSAGE);
 
- my $ret = check_term_capability(@capabilities);
+ my $ret = check_term_capabilities(@capabilities);
  print $ERROR_MESSAGE."\n";
 
 =head1 DESCRIPTION
@@ -56,9 +56,9 @@ Extra thing is error message which describe issue.
 
 =head1 SUBROUTINES
 
-=head2 check_term_capability
+=head2 check_term_capabilities
 
- my $ret = check_term_capability(@capabilities);
+ my $ret = check_term_capabilities(@capabilities);
 
 Check possibility of string terminal capabilities on system.
 
@@ -75,14 +75,14 @@ Returns 0/1.
 
 =head2 EXAMPLE1
 
-=for comment filename=check_term_capability.pl
+=for comment filename=check_term_capabilities.pl
 
  use strict;
  use warnings;
 
- use Check::Term qw(check_term_capability $ERROR_MESSAGE);
+ use Check::Term qw(check_term_capabilities $ERROR_MESSAGE);
 
- if (check_term_capability('parm_ich')) {
+ if (check_term_capabilities('parm_ich')) {
          print "We could use terminal 'parm_ich' capability.\n";
  } else {
          print "We couldn't use terminal 'parm_ich' capability.\n";
@@ -98,17 +98,17 @@ Returns 0/1.
 
 =head2 EXAMPLE2
 
-=for comment filename=test_term_capability.pl
+=for comment filename=test_term_capabilities.pl
 
  use strict;
  use warnings;
 
- use Check::Term qw(check_term_capability);
+ use Check::Term qw(check_term_capabilities);
  use Test::More 'tests' => 1;
 
  SKIP: {
          skip $Check::Term::ERROR_MESSAGE, 1
-                 unless check_term_capability('parm_ich');
+                 unless check_term_capabilities('parm_ich');
 
          ok(1, "Terminal 'parm_ich' capability test");
  };

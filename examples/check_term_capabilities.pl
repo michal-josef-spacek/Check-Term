@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-use Check::Term qw(check_term_capability $ERROR_MESSAGE);
+use Check::Term qw(check_term_capabilities $ERROR_MESSAGE);
 
-if (check_term_capability('parm_ich')) {
+if (check_term_capabilities('parm_ich')) {
         print "We could use terminal 'parm_ich' capability.\n";
 } else {
         print "We couldn't use terminal 'parm_ich' capability.\n";
