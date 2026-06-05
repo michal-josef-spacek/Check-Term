@@ -1,0 +1,42 @@
+NAME
+    Check::Term - XXX
+
+SYNOPSIS
+     use Check::Term;
+
+     # XXX
+
+DESCRIPTION
+     XXX
+
+EXAMPLES
+  EXAMPLE
+     use strict;
+     use warnings;
+
+     use Check::Term;
+
+     # XXX
+
+     # Output.
+     # TODO
+
+DEPENDENCIES
+     XXX
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Check-Term>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim\@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2026 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
