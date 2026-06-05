@@ -10,7 +10,7 @@ use Term::Terminfo;
 our $ERROR_MESSAGE;
 Readonly::Array our @EXPORT_OK => qw(check_term_capabilities $ERROR_MESSAGE);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub check_term_capabilities {
 	my @capabilities = @_;
@@ -159,6 +159,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
