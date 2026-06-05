@@ -5,7 +5,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'XXX';
+abstract 'Check terminal functionality.';
 author 'Michal Josef Spacek <skim@cpan.org>';
 author_requires 'File::Object' => 0.05;
 author_requires 'Test::More' => 0;
